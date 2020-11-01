@@ -3,7 +3,7 @@ guid: c31ef2d8735edaa4c898f9e490b6d95e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -57,6 +57,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -98,11 +99,7 @@ TextureImporter:
     serializedVersion: 2
     sprites: []
     outline: []
-    physicsShape:
-    - - {x: -8, y: -8}
-      - {x: -8, y: 8}
-      - {x: 0, y: 8}
-      - {x: 0, y: -8}
+    physicsShape: []
     bones: []
     spriteID: 8f23cf6e2470cb947a0780d767d2f5d0
     internalID: 0

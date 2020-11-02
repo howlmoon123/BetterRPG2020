@@ -42,6 +42,27 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground1
+    uniqueID: 309876349
+    locked: 0
+  - name: Ground2
+    uniqueID: 781918167
+    locked: 0
+  - name: Ground3
+    uniqueID: 837905659
+    locked: 0
   - name: Instances
     uniqueID: 142492687
+    locked: 0
+  - name: Collisions
+    uniqueID: 240227803
+    locked: 0
+  - name: Forward1
+    uniqueID: 2971304465
+    locked: 0
+  - name: Forward2
+    uniqueID: 3831155729
+    locked: 0
+  - name: GridPositionsInformation
+    uniqueID: 2000719493
     locked: 0

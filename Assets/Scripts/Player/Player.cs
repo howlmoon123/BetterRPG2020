@@ -99,12 +99,12 @@ public class Player : SingletonMonobehaviour<Player>
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger " + collision.name);
+       // Debug.Log("Trigger " + collision.name);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision " + collision.gameObject.name);
+       // Debug.Log("Collision " + collision.gameObject.name);
     }
 
 

@@ -1,12 +1,11 @@
 ﻿using Cinemachine;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class SwitchConfineBoundingShape : MonoBehaviour
 {
     public Transform player;
-    [SerializeField]
-    string sceneName;
+   
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag(Tags.Player).transform;
@@ -30,14 +29,12 @@ public class SwitchConfineBoundingShape : MonoBehaviour
     /// </summary>
     private void SwitchBoundingShape()
     {
-         sceneName = SceneManager.GetSceneByName(SceneName.Scene3_Cabin.ToString()).name;
-        if (sceneName != SceneName.Scene3_Cabin.ToString())
-        {
-            //  Get the polygon collider on the 'boundsconfiner' gameobject which is used by Cinemachine to prevent the camera going beyond the screen edges
-            PolygonCollider2D polygonCollider2D = GameObject.FindGameObjectWithTag(Tags.BoundsConfiner).GetComponent<PolygonCollider2D>();
-           // Debug.LogError(polygonCollider2D);
-            CinemachineConfiner cinemachineConfiner = GetComponent<CinemachineConfiner>();
 
+     
+            PolygonCollider2D polygonCollider2D = GameObject.FindGameObjectWithTag(Tags.BoundsConfiner).GetComponent<PolygonCollider2D>();
+           
+            CinemachineConfiner cinemachineConfiner = GetComponent<CinemachineConfiner>();
+           //Debug.Log("Confiner " + sceneName);
             cinemachineConfiner.m_BoundingShape2D = polygonCollider2D;
 
             var vCam = GetComponent<CinemachineVirtualCamera>();
@@ -45,8 +42,6 @@ public class SwitchConfineBoundingShape : MonoBehaviour
             vCam.Follow = player;
             // since the confiner bounds have changed need to call this to clear the cache;
 
-            cinemachineConfiner.InvalidatePathCache();
-
-        }
+     
     }
 }
